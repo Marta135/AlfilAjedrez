@@ -7,6 +7,19 @@ public class Alfil {
 	private Posicion posicion;
 	
 	
+	/*******CONSTRUCTORES*******/
+	
+	/**
+	 * Constructor por defecto, que inicializa los atributos a unos valores 
+     * por defecto establecidos por nosotros
+	 */
+	public Alfil() throws IllegalArgumentException {
+		
+		color=Color.NEGRO;
+		posicion=new Posicion(8,'f');
+	}
+	
+	
 	/*********GETTERS Y SETTERS**********/
 	
 	private void setPosicion(Posicion posicion) {
