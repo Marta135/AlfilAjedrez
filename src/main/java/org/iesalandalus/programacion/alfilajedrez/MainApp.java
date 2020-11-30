@@ -121,5 +121,23 @@ public class MainApp {
 		return columna;
 	}
 	
+	/**
+	 * Método mostrarMenuDirecciones
+	 * Método que mostrará por consola las distintas direcciones que podemos elegir.
+	 */
+	private static void mostrarMenuDirecciones() {
+		
+		System.out.println("");
+		System.out.println("Direcciones del alfil: ");
+		System.out.println("------------------------");
+		System.out.println("1.- ARRIBA_DERECHA");
+		System.out.println("2.- ABAJO_DERECHA");
+		System.out.println("3.- ABAJO_IZQUIERDA");
+		System.out.println("4.- ARRIBA_IZQUIERDA");
+		System.out.println("");	
+	}
+	
+	
+	
 	
 }
