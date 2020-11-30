@@ -19,6 +19,22 @@ public class Alfil {
 		posicion=new Posicion(8,'f');
 	}
 	
+	/**
+	 * Constructor con el parámetro color.
+	 * @param color: si es BLANCO (posicion=1,f) si es NEGRO (posicion=8,f).
+	 */
+	public Alfil(Color color) throws IllegalArgumentException {
+		
+		if (color==null)
+			throw new NullPointerException("ERROR: No se puede asignar un color nulo.");
+		
+		setColor(color);
+		if (color.equals(Color.BLANCO))
+			posicion=new Posicion(1,'f');
+		else
+			posicion=new Posicion(8,'f');
+	}
+	
 	
 	/*********GETTERS Y SETTERS**********/
 	
