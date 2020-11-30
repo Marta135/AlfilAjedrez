@@ -7,6 +7,18 @@ public class Posicion {
 	private char columna;
 	
 	
+	/*******CONSTRUCTORES*******/
+	
+	/**
+	 * Constructor que inicializa los atributos a través de parámetros
+	 */
+	public Posicion (int fila, char columna) {
+		
+		setFila(fila);
+		setColumna(columna);
+	}
+	
+	
 	/*********GETTERS Y SETTERS**********/
 	private void setFila(int fila) {
 		
