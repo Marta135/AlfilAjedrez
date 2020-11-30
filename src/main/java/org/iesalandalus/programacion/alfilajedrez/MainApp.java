@@ -57,6 +57,37 @@ public class MainApp {
 		
 	}
 	
+	/**
+	 * Método elegirColor
+	 * Método que nos pide que escojamos un color para el alfil
+	 */
+	private static Color elegirColor() {
+		
+		int colorAlfil;
+		Color color=Color.BLANCO;
+		
+		do {
+			System.out.println("");
+			System.out.println("Escoge el color del alfil: ");
+			System.out.println("0.- Color Blanco");
+			System.out.println("1.- Color Negro");
+			System.out.println("");
+			colorAlfil=Entrada.entero();
+		} while (colorAlfil!=0 && colorAlfil!=1);
+		
+		switch (colorAlfil) {
+			case 0:
+				color=Color.BLANCO;
+				break;
+			case 1:
+				color=Color.NEGRO;
+				break;
+			default:
+				break;
+		}
+		
+		return color;
+	}
 	
 	
 }
