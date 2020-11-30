@@ -9,6 +9,7 @@ public class MainApp {
 	/*******ATRIBUTOS******/
 	private static Alfil alfil;
 	
+
 	
 	/**
 	 * Método void main(String[])
@@ -245,11 +246,9 @@ public class MainApp {
 			System.out.println("Movimiento realizado correctamente");
 			System.out.println("----------------------------------");
 		} 
-		catch (OperationNotSupportedException e) {
+		catch (OperationNotSupportedException | IllegalArgumentException e) {
 			System.out.println(e.getMessage());
-		}
-		catch (IllegalArgumentException e) {
-			System.out.println(e.getMessage());
+			System.out.println("");
 		}
 		catch (NullPointerException e) {
 			System.out.println("ERROR: El alfil no ha sido creado. ");
