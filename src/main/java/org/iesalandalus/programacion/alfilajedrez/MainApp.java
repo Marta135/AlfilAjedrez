@@ -89,5 +89,37 @@ public class MainApp {
 		return color;
 	}
 	
+	/**
+	 * Método elegirColumnaInicial
+	 * Método que pide al usuario que escoja una columna inicial para el alfil
+	 */
+	private static char elegirColumnaInicial() {
+		
+		int columnaInicial;
+		char columna='f';
+		
+		do {
+			System.out.println("");
+			System.out.println("Escoge la columna inicial del alfil: ");
+			System.out.println("0.- 'c'");
+			System.out.println("1.- 'f'");
+			System.out.println("");
+			columnaInicial=Entrada.entero();
+		} while (columnaInicial!=0 && columnaInicial!=1);
+		
+		switch (columnaInicial) {
+		case 0:
+			columna='c';
+			break;
+		case 1:
+			columna='f';
+			break;
+		default:
+			break;
+		}
+	
+		return columna;
+	}
+	
 	
 }
