@@ -72,7 +72,25 @@ public class MainApp {
 		catch (IllegalArgumentException e) {
 			System.out.println(e.getMessage());
 		}
+	}
+	
+	/**
+	 * Método crearAlfilColor
+	 * Asigna al atributo de clase alfil una nueva instancia de un alfil creado con 
+	 * el constructor al que le pasamos el color.
+	 */
+	private static void crearAlfilColor() {
 		
+		try {
+			alfil=new Alfil(elegirColor());
+			System.out.println("----------------------------");
+			System.out.println("Alfil creado correctamente.");
+			System.out.println("----------------------------");
+		}
+		catch (NullPointerException | IllegalArgumentException e) {
+			System.out.println("ERROR: El alfil no ha sido creado.");
+			System.out.println(e.getMessage());  
+		}
 	}
 	
 	/**
