@@ -56,7 +56,36 @@ public class MainApp {
 		} while (opcion<0 || opcion>4);
 		
 		return opcion;
+	}
+	
+	/**
+	 * Método ejecutarOpcion
+	 * Dependiendo de la opción pasada como parámetro, actuará en consecuencia y
+	 * mostrará el estado del alfil.
+	 */
+	private static void ejecutarOpcion(int opcion) {
 		
+		switch (opcion) {
+		
+			case 1:
+				crearAlfilDefecto(); 
+				mostrarAlfil();      
+				break;
+			case 2:
+				crearAlfilColor(); 
+				mostrarAlfil();
+				break;
+			case 3:
+				crearAlfilColorColumna(); 
+				mostrarAlfil();
+				break;
+			case 4:
+				mover(); 
+				mostrarAlfil();
+				break;
+			default:
+				break;
+		}
 	}
 	
 	/**
