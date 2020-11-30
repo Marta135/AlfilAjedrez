@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.alfilajedrez;
 
+import javax.naming.OperationNotSupportedException;
+
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class MainApp {
@@ -173,6 +175,35 @@ public class MainApp {
 		}
 	
 		return columna;
+	}
+	
+	/**
+	 * Método mover
+	 * Mostrará el menú con las posibles direcciones, nos preguntará por la dirección 
+	 * y la cantidad de pasos a mover y moverá el alfil.
+	 */
+	private static void mover() {
+			
+			mostrarMenuDirecciones();
+			Direccion direccion=elegirDireccion();
+			System.out.println("Introduce el número de pasos a dar: ");
+			int pasos=Entrada.entero();
+			
+		try {
+			alfil.mover(direccion, pasos);
+			System.out.println("----------------------------------");
+			System.out.println("Movimiento realizado correctamente");
+			System.out.println("----------------------------------");
+		} 
+		catch (OperationNotSupportedException e) {
+			System.out.println(e.getMessage());
+		}
+		catch (IllegalArgumentException e) {
+			System.out.println(e.getMessage());
+		}
+		catch (NullPointerException e) {
+			System.out.println("ERROR: El alfil no ha sido creado. ");
+		}
 	}
 	
 	/**
