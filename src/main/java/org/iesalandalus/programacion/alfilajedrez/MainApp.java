@@ -126,6 +126,24 @@ public class MainApp {
 	}
 	
 	/**
+	 * Método crearAlfilColorColumna
+	 * Asigna al atributo de clase alfil una nueva instancia de un alfil creado con 
+	 * el constructor al que le pasamos el color y la columna inicial. 
+	 */
+	private static void crearAlfilColorColumna() {
+		try {
+			alfil=new Alfil(elegirColor(), elegirColumnaInicial());
+			System.out.println("----------------------------");
+			System.out.println("Alfil creado correctamente.");
+			System.out.println("----------------------------");
+		}
+		catch (NullPointerException | IllegalArgumentException e) {
+			System.out.println("ERROR: El alfil no ha sido creado.");
+			System.out.println(e.getMessage());  
+		}
+	}
+	
+	/**
 	 * Método elegirColumnaInicial
 	 * Método que pide al usuario que escoja una columna inicial para el alfil
 	 */
