@@ -58,6 +58,24 @@ public class MainApp {
 	}
 	
 	/**
+	 * Método crearAlfilDefecto
+	 * Asigna al atributo alfil una nueva instancia de un alfil creado con el 
+	 * constructor por defecto.
+	 */
+	private static void crearAlfilDefecto() {
+		try {
+			alfil=new Alfil();
+			System.out.println("----------------------------");
+			System.out.println("Alfil creado correctamente.");
+			System.out.println("----------------------------");
+		}
+		catch (IllegalArgumentException e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+	
+	/**
 	 * Método elegirColor
 	 * Método que nos pide que escojamos un color para el alfil
 	 */
