@@ -137,7 +137,39 @@ public class MainApp {
 		System.out.println("");	
 	}
 	
-	
+	/**
+	 * Método elegirDireccion
+	 * Método que permite elegir la dirección del menú de direcciones.
+	 */
+	private static Direccion elegirDireccion() {
+		
+		int direccionAlfil;
+		Direccion direccion=Direccion.ARRIBA_DERECHA;
+		
+		do {
+			System.out.println("Escoge la dirección del alfil (1-4): ");
+			direccionAlfil=Entrada.entero();
+		} while (direccionAlfil<1 || direccionAlfil>4);
+		
+		switch (direccionAlfil) {
+			case 1:
+				direccion=Direccion.ARRIBA_DERECHA;
+				break;
+			case 2:
+				direccion=Direccion.ABAJO_DERECHA;
+				break;
+			case 3:
+				direccion=Direccion.ABAJO_IZQUIERDA;
+				break;
+			case 4:
+				direccion=Direccion.ARRIBA_IZQUIERDA;
+				break;
+			default:
+				break;
+		}
+		
+		return direccion;
+	}
 	
 	
 }
