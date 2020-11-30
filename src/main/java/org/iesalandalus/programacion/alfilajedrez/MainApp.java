@@ -10,6 +10,27 @@ public class MainApp {
 	private static Alfil alfil;
 	
 	
+	/**
+	 * Método void main(String[])
+	 * Método principal de nuestra aplicación.
+	 */
+	public static void main(String[] args) {
+		
+		int opcion;
+		
+		do {
+			mostrarMenu();
+			
+			opcion = elegirOpcion();
+			
+			ejecutarOpcion(opcion);
+			
+		}while (opcion!=0);
+		
+		System.out.println("¡Hasta pronto!");
+	}
+	
+	
 	/**********MÉTODOS********/
 	
 	/**
