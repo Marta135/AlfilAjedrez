@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.alfilajedrez;
 
+import javax.naming.OperationNotSupportedException;
+
 public class Alfil {
 
 	/*********ATRIBUTOS*********/
@@ -81,6 +83,65 @@ public class Alfil {
 	public Color getColor() {
 		return color;
 	}
+	
+	
+	/********OTROS MÉTODOS********/
+	
+	/**
+	 * Método mover
+	 * Método para mover el alfil por el tablero.
+	 */
+	public void mover(Direccion direccion, int pasos) throws OperationNotSupportedException  {
+		
+		if(direccion==null)
+			throw new NullPointerException ("ERROR: La dirección no puede ser nula.");
+		
+		if(pasos<=0)
+			throw new IllegalArgumentException("ERROR: El número de pasos debe ser positivo.");
+	
+			
+		int nuevaFila = posicion.getFila();
+		char nuevaColumna = posicion.getColumna();
+		
+				
+		switch (direccion) {
+			
+			case ARRIBA_DERECHA:
+				nuevaFila += pasos;
+				nuevaColumna += pasos;
+				break;
+		
+			case ARRIBA_IZQUIERDA:
+				nuevaFila += pasos;
+				nuevaColumna -= pasos;
+				break;
+		
+			case ABAJO_DERECHA:
+				nuevaFila -= pasos;
+				nuevaColumna += pasos;
+				break;
+		
+			case ABAJO_IZQUIERDA:
+				nuevaFila -= pasos;
+				nuevaColumna -= pasos;
+				break;
+		
+			default:
+				break;	
+				
+		}
+		
+		try {
+			
+			setPosicion(new Posicion(nuevaFila, nuevaColumna));
+		} 
+		catch (IllegalArgumentException e) {
+			throw new OperationNotSupportedException("ERROR: Movimiento no válido (se sale del tablero).");
+		}
+
+	}
+
+	
 	
 }
 
