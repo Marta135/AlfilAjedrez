@@ -32,6 +32,7 @@ public class Posicion {
 	
 	
 	/*********GETTERS Y SETTERS**********/
+	
 	private void setFila(int fila) {
 		
 		if (fila<1 || fila>8)
@@ -57,7 +58,8 @@ public class Posicion {
 	}
 
 	
-	/********MÉTODOS EQUALS Y HASHCODE********/
+	/********OTROS MÉTODOS********/
+	
 	/**
 	 * Método hashCode
 	 */
@@ -89,7 +91,15 @@ public class Posicion {
 			return false;
 		return true;
 	}
+
 	
+	/**
+	 * Método toString
+	 */
+	@Override
+	public String toString() {
+		return "fila=" + this.fila + ", columna=" + this.columna;
+	}
 	
 	
 
