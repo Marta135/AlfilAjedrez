@@ -176,6 +176,15 @@ public class Alfil {
 		return true;
 	}
 
+	/**
+	 * Método toString
+	 */
+	@Override
+	public String toString() {
+		return this.posicion + ", color=" + this.color;
+	}
+
+	
 	
 	
 }
