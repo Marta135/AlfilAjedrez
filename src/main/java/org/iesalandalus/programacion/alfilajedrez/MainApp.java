@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.alfilajedrez;
 
+import org.iesalandalus.programacion.utilidades.Entrada;
+
 public class MainApp {
 
 	/*******ATRIBUTOS******/
@@ -37,5 +39,24 @@ public class MainApp {
 		System.out.println("");
 		
 	}
+	
+	/**
+	 * Método elegirOpcion
+	 * Método que nos pedirá que escojamos una de las opciones del menú
+	 */
+	private static int elegirOpcion() {
+		
+		int opcion;
+		
+		do {
+			System.out.println("Elige una opción (0-4): ");
+			opcion=Entrada.entero();
+		} while (opcion<0 || opcion>4);
+		
+		return opcion;
+		
+	}
+	
+	
 	
 }
